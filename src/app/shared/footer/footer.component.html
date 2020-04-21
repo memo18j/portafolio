@@ -14,22 +14,32 @@
       </ul>
       <p class="rk-footer__text rk-footer__copy">
         <span class="ae-u-bold">© </span
-        ><span class="ae-u-bolder">{{ anio }} MEMO'S </span>All Right Reserved.
+        ><span class="ae-u-bolder"
+          >{{ anio }} {{ serviceInfo.info.titulo }} </span
+        >All Right Reserved.
       </p>
     </div>
     <div class="ae-grid__item item-lg-4 au-xs-ta-center">
-      <a href="#0" class="rk-social-btn">
+      <a href="{{ serviceInfo.info.facebook }}" class="rk-social-btn">
         <svg>
-          <use xlink:href="assets/img/symbols.svg#icon-facebook"></use></svg></a
-      ><a href="#0" class="rk-social-btn">
+          <use xlink:href="assets/img/symbols.svg#icon-facebook"></use>
+        </svg>
+      </a>
+      <a href="{{ serviceInfo.info.twitter }}" class="rk-social-btn">
         <svg>
-          <use xlink:href="assets/img/symbols.svg#icon-twitter"></use></svg></a
-      ><a href="#0" class="rk-social-btn">
+          <use xlink:href="assets/img/symbols.svg#icon-twitter"></use>
+        </svg>
+      </a>
+      <a href="{{ serviceInfo.info.instagram }}" class="rk-social-btn">
         <svg>
           <use
             xlink:href="assets/img/symbols.svg#icon-pinterest"
           ></use></svg></a
-      ><a href="#0" class="rk-social-btn">
+      ><a
+        target="_blank"
+        [href]="serviceInfo.info.urlpagina"
+        class="rk-social-btn"
+      >
         <svg>
           <use xlink:href="assets/img/symbols.svg#icon-tumblr"></use></svg
       ></a>
@@ -38,13 +48,16 @@
       <p class="rk-footer__text rk-footer__contact">
         <span class="ae-u-bold">Email: </span
         ><span class="ae-u-bolder">
-          <a href="#0" class="rk-dark-color"
-            >jguillermoparada@gmail.com
+          <a href="mailTo:{{ serviceInfo.info.email }}" class="rk-dark-color"
+            >{{ serviceInfo.info.email }}
           </a></span
         >
       </p>
       <p class="rk-footer__text rk-footer__by">
-        Theme by <a href="http://pixeden.com" class="ae-u-bolder">Jgpc.</a>
+        Theme by
+        <a href="http://pixeden.com" class="ae-u-bolder"
+          >{{ serviceInfo.info.nombrecorto }}.</a
+        >
       </p>
     </div>
   </div>
