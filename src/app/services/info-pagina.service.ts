@@ -32,7 +32,6 @@ export class InfoPaginaService {
       .get('https://portafolio-ccfac.firebaseio.com/equipo.json')
       .subscribe((resp: any[]) => {
         this.equipo = resp;
-        console.log(this.equipo);
       });
   }
 }
