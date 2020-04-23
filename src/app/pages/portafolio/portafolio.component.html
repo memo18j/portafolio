@@ -61,7 +61,7 @@
   <div *ngIf="!infoProducto.cargando" class="ae-masonry-md-2 ae-masonry-xl-4">
     <a
       *ngFor="let productos of infoProducto.productos"
-      routerLink="/item"
+      [routerLink]="['/item', productos.cod]"
       class="animated swing rk-item ae-masonry__item"
     >
       <img src="assets/img/{{ productos.url }}.jpg" alt="" />
